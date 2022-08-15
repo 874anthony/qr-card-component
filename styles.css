@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
+
+/* General reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0;
+  margin: 0;
+  font-size: 1em;
+}
+
+img,
+video {
+  max-width: 100%;
+}
+
+/* General reset ends here */
+
+/* Define the base font size for the entire site */
+:root {
+  --step--2: clamp(0.65rem, calc(0.58rem + 0.31vw), 0.8rem);
+  --step--1: clamp(0.78rem, calc(0.67rem + 0.46vw), 1rem);
+  --step-0: clamp(0.94rem, calc(0.78rem + 0.65vw), 1.25rem);
+  --step-1: clamp(1.13rem, calc(0.91rem + 0.92vw), 1.56rem);
+  --step-2: clamp(1.35rem, calc(1.05rem + 1.26vw), 1.95rem);
+  --step-3: clamp(1.62rem, calc(1.22rem + 1.72vw), 2.44rem);
+  --step-4: clamp(1.94rem, calc(1.4rem + 2.32vw), 3.05rem);
+  --step-5: clamp(2.33rem, calc(1.61rem + 3.1vw), 3.82rem);
+}
+
+:root {
+  --color-white: hsl(0, 0%, 100%);
+  --color-light-gray: hsl(212, 45%, 89%);
+  --color-grayish-blue: hsl(220, 15%, 55%);
+  --color-dark-blue: hsl(218, 44%, 22%);
+}
+
+html {
+  font-family: "Outfit", sans-serif;
+  font-size: var(--step-0);
+}
+
+body {
+  height: 100vh;
+  background-color: var(--color-light-gray);
+}
+
+.card {
+  display: grid;
+  place-items: center;
+  height: 100%;
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20rem;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: var(--color-white);
+  border-radius: 12px;
+  box-shadow: 0 10px 1.4rem rgba(0, 0, 0, 0.1);
+}
+
+.card__img {
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.card__title {
+  font-size: 1.3rem;
+  text-align: center;
+  font-weight: 700;
+  color: var(--color-dark-blue);
+  width: 85%;
+}
+
+.card__description {
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 400;
+  color: var(--color-grayish-blue);
+  width: 83%;
+}
